@@ -1,0 +1,156 @@
+{
+  "repo": "hash",
+  "label": "v2-hunks",
+  "head": "8482409d63279b7e7a5c486e67d5832cfbe4ac80",
+  "commits_all": 195,
+  "git_commit_graph_s": 0.021830957999999998,
+  "build_s": 0.39239375,
+  "index_commits": 195,
+  "index_strings": 366,
+  "index_bytes": 164515,
+  "segment_bytes": 57600,
+  "reach_bytes": 3384,
+  "blobs_bytes": 25536,
+  "hunks_bytes": 77404,
+  "hunks": true,
+  "core_bytes": 61575,
+  "paths": [
+    "internal/shell/shell.go",
+    "go.mod",
+    "go.sum",
+    "internal/executor/executor.go",
+    ".github/workflows/release.yml",
+    "internal/editor/editor.go",
+    ".release-please-manifest.json",
+    "README.md",
+    "internal/agent/acp.go",
+    "internal/editor/display.go",
+    "internal/config/load_error.go",
+    "internal/agent/reconnect_test.go",
+    "internal/editor/mode.go",
+    "demos/hero.gif",
+    "dx.md",
+    "internal/prompt/colors_test.go",
+    "e2e/live_agent_test.go",
+    "internal/editor/editor_additional_test.go",
+    "internal/shell/agent_stream_error_test.go",
+    "docs/completion-plugins.md",
+    "internal/parser/fuzz_test.go",
+    "internal/compat/prompt_test.go",
+    "cmd/hash/migrate.go",
+    "e2e/devops_recipes_test.go",
+    "internal/executor/pattern_test.go",
+    "internal/executor/cmd_status.go",
+    "docs/superpowers/plans/2026-06-05-turn-by-turn-agent-conversation.md",
+    "internal/completion/executable.go",
+    "e2e/learning_e2e_test.go",
+    "internal/readline/readline_test.go"
+  ],
+  "process_floor_ms": 1.5902499999995712,
+  "git_floor_ms": 7.2187499999998295,
+  "inproc_open_ms": 0.185625,
+  "blame_paths": [
+    "internal/shell/shell.go",
+    "go.mod",
+    "go.sum",
+    "internal/executor/executor.go",
+    ".github/workflows/release.yml",
+    "internal/editor/editor.go",
+    ".release-please-manifest.json",
+    "README.md",
+    "internal/agent/acp.go",
+    "internal/editor/display.go",
+    "internal/config/load_error.go",
+    "internal/agent/reconnect_test.go",
+    "internal/editor/mode.go",
+    "dx.md",
+    "internal/prompt/colors_test.go",
+    "e2e/live_agent_test.go",
+    "internal/editor/editor_additional_test.go",
+    "internal/shell/agent_stream_error_test.go",
+    "docs/completion-plugins.md",
+    "internal/parser/fuzz_test.go",
+    "internal/compat/prompt_test.go",
+    "cmd/hash/migrate.go",
+    "e2e/devops_recipes_test.go",
+    "internal/executor/pattern_test.go",
+    "internal/executor/cmd_status.go",
+    "docs/superpowers/plans/2026-06-05-turn-by-turn-agent-conversation.md",
+    "internal/completion/executable.go",
+    "e2e/learning_e2e_test.go",
+    "internal/readline/readline_test.go"
+  ],
+  "blame_exact": {
+    "paths": 29,
+    "mismatches": [],
+    "lines": 12813
+  },
+  "latency_ms": {
+    "git_log": {
+      "median": 12.25672900000041,
+      "p90": 14.279957999999926,
+      "max": 15.210791000000112
+    },
+    "git_follow": {
+      "median": 19.645500000000204,
+      "p90": 23.479209000000445,
+      "max": 25.600166000000257
+    },
+    "cli_log": {
+      "median": 6.178354500000038,
+      "p90": 6.559499999999829,
+      "max": 6.679791000000046
+    },
+    "cli_follow": {
+      "median": 6.314333499999769,
+      "p90": 6.534375000000203,
+      "max": 6.706332999999454
+    },
+    "inproc_log": {
+      "median": 8.3e-05,
+      "p90": 0.000208,
+      "max": 0.00029099999999999997
+    },
+    "inproc_follow": {
+      "median": 0.00010400000000000001,
+      "p90": 0.000333,
+      "max": 0.0005
+    },
+    "inproc_cochange": {
+      "median": 0.015521,
+      "p90": 0.037417,
+      "max": 0.045959
+    },
+    "inproc_blame": {
+      "median": 0.001854,
+      "p90": 0.023541,
+      "max": 0.076333
+    },
+    "git_blame": {
+      "median": 9.826958999999746,
+      "p90": 12.644124999999562,
+      "max": 18.248875000001163
+    },
+    "cli_blame": {
+      "median": 13.42312500000098,
+      "p90": 15.064917000000122,
+      "max": 16.215708000000717
+    }
+  },
+  "exact": {
+    "paths": 30,
+    "mismatches": []
+  },
+  "shallow_clone_s": 0.12247591700000093,
+  "shallow_git_bytes": 925696,
+  "full_git_bytes": 31875072,
+  "pull_s": 0.006269583000001688,
+  "pulled_bytes": 138979,
+  "shallow_blame_identical": 29,
+  "shallow": {
+    "paths": 30,
+    "identical_follow": 30,
+    "git_follow_commits_max": 1,
+    "git_follow_commits_mean": 1
+  }
+}

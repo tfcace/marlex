@@ -1,0 +1,114 @@
+// Git history index, segment format v2.
+//
+// The index is a stack of immutable Segment files plus a JSON manifest and a
+// Reach overlay. Every table is columnar: numeric data lives in flat vectors so
+// readers can binary-search them in place from a memory-mapped file.
+//
+// Global commit index: commits are numbered in topological order (parents
+// before children) across the whole stack. A segment holds the contiguous
+// range [base_commit, base_commit + len(times)).
+//
+// Global string ID: every interned string (path, author, test ID, job) gets a
+// stable ID. A segment introduces the range [base_string, base_string + len(strings)).
+//
+// Evolution policy (tested in internal/fb/fb_test.go):
+//   - New fields are only appended to a table. Fields are never removed,
+//     renamed in meaning, or reordered.
+//   - Readers ignore fields they do not know and treat absent vectors as empty,
+//     so old readers read new segments and new readers read old ones.
+//   - `version` is bumped only for a breaking change; readers refuse a version
+//     they do not know rather than misread it. Git stays the source of truth,
+//     so a breaking change is handled by rebuilding the index.
+//
+// The Go accessors in internal/fb are written to match this schema's vtable
+// layout (field N lives at vtable offset 4 + 2*N), so `flatc --go` output and
+// the hand-written readers are wire compatible.
+
+namespace marlex.fb;
+
+table Segment {
+  version:uint32;              // 0
+  base_commit:uint32;          // 1
+  base_string:uint32;          // 2
+
+  // Commits, indexed by local commit number.
+  hashes:[ubyte];              // 3  20 bytes per commit
+  hash_order:[uint32];         // 4  local commit numbers sorted by hash
+  authors:[uint32];            // 5  string ID of "Name <email>"
+  times:[int64];               // 6  author time, unix seconds
+  parent_offsets:[uint32];     // 7  n+1 offsets into parents
+  parents:[uint32];            // 8  global commit indices
+  subjects:[string];           // 9
+
+  // Trees: changes against the first parent, per commit, sorted by path.
+  change_offsets:[uint32];     // 10 n+1 offsets into change_* vectors
+  change_paths:[uint32];       // 11 string ID
+  change_old_paths:[uint32] (deprecated); // 12 v1 only: see rename_* below
+  change_kinds:[ubyte];        // 13 'A' 'M' 'D' 'R' 'C' 'T'
+  change_modes:[uint32] (deprecated);     // 14 v1 only: see change_mode_codes
+  change_blobs:[ubyte] (deprecated);      // 15 v1 only: moved to the Blobs sidecar
+
+  // Path history, sorted by path ID.
+  ph_paths:[uint32];           // 16
+  ph_offsets:[uint32];         // 17 len(ph_paths)+1 offsets into ph_commits
+  ph_commits:[uint32];         // 18 global commit indices, ascending
+
+  // Interned strings introduced by this segment.
+  strings:[string];            // 19
+  string_hashes:[uint64];      // 20 FNV-1a of each string, sorted
+  string_hash_ids:[uint32];    // 21 global string ID matching string_hashes
+
+  // Test runs, sorted by test ID then time. No longer written: marlex
+  // recorded CI results here through v0.1.0, and readers skip them.
+  tr_tests:[uint32];           // 22 string ID of "<unit>::<name>"
+  tr_units:[uint32];           // 23 string ID of the ordering unit (package or file)
+  tr_commits:[uint32];         // 24 global commit index
+  tr_times:[int64];            // 25 unix seconds
+  tr_status:[ubyte];           // 26 'P' pass, 'F' fail, 'S' skip
+  tr_durations:[uint32];       // 27 milliseconds
+  tr_jobs:[uint32];            // 28 string ID of the CI job
+
+  // v2: renames are rare, so they are stored sparsely.
+  rename_changes:[uint32];     // 29 change indices with an old path, ascending
+  rename_old_paths:[uint32];   // 30 string ID of each one's old path
+  change_mode_codes:[ubyte];   // 31 one per change: 1=100644 2=100755 3=120000
+                               //    4=160000 5=040000 0=none (deleted) 255=other
+}
+
+// Optional sidecar, one per core segment that has commits: the new blob hash
+// of each change, in the core segment's change order. Fetched only by tools
+// that compare content across history (revert and cherry-pick detection).
+table Blobs {
+  version:uint32;              // 0
+  base_commit:uint32;          // 1 matches the core segment
+  num_changes:uint32;          // 2
+  hashes:[ubyte];              // 3 20 bytes per change
+}
+
+// Optional sidecar, one per core segment, written by `build --hunks`: the
+// line ranges each change's first-parent diff replaced (git diff -U0), in the
+// core segment's change order. Blame walks these instead of file contents.
+table Hunks {
+  version:uint32;              // 0
+  base_commit:uint32;          // 1 matches the core segment
+  num_changes:uint32;          // 2
+  change_offsets:[uint32];     // 3 num_changes+1 offsets into the hunk vectors
+  old_start:[uint32];          // 4 as in "@@ -old_start,old_len +new_start,new_len @@"
+  old_len:[uint32];            // 5
+  new_start:[uint32];          // 6
+  new_len:[uint32];            // 7
+}
+
+// Mutable overlay rebuilt on every update: which refs reach which commits.
+// Force-pushes rewrite this file only; segments are never touched.
+table Reach {
+  num_commits:uint32;          // 0
+  refs:[string];               // 1
+  tips:[uint32];               // 2 global commit index of each ref
+  words_per_commit:uint32;     // 3
+  bitmap:[uint64];             // 4 num_commits * words_per_commit
+  children_offsets:[uint32];   // 5 num_commits+1
+  children:[uint32];           // 6 global commit indices
+}
+
+root_type Segment;

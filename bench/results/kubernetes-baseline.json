@@ -1,0 +1,119 @@
+{
+  "repo": "kubernetes",
+  "label": "baseline",
+  "head": "098ec58c5a98cc5da18f119d0123361afca888b4",
+  "commits_all": 163022,
+  "git_commit_graph_s": 6.522323375,
+  "build_s": 12.645267208,
+  "index_commits": 163022,
+  "index_strings": 108793,
+  "index_bytes": 91017850,
+  "segment_bytes": 88139984,
+  "reach_bytes": 2877432,
+  "paths": [
+    "pkg/kubelet/kubelet.go",
+    "pkg/features/kube_features.go",
+    "vendor/modules.txt",
+    "api/openapi-spec/swagger.json",
+    "go.mod",
+    "go.sum",
+    "pkg/kubelet/kubelet_test.go",
+    "pkg/generated/openapi/zz_generated.openapi.go",
+    "cmd/kubelet/app/server.go",
+    "cluster/gce/util.sh",
+    "staging/src/k8s.io/apiserver/pkg/registry/rest/table.go",
+    "vendor/k8s.io/utils/inotify/inotify_others.go",
+    "pkg/util/async/runner.go",
+    "staging/src/k8s.io/client-go/kubernetes/typed/extensions/v1beta1/fake/fake_ingress.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.36/fail/apparmorprofile1.yaml",
+    "hack/verify-licenses.sh",
+    "pkg/apis/storage/v1alpha1/zz_generated.conversion.go",
+    "vendor/github.com/go-jose/go-jose/v4/jwe.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/baseline/v1.13/fail/hostports2.yaml",
+    "pkg/controlplane/controller/defaultservicecidr/default_servicecidr_controller_test.go",
+    "staging/src/k8s.io/client-go/applyconfigurations/networking/v1beta1/ingressrule.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.10/fail/hostnamespaces2.yaml",
+    "pkg/apis/autoscaling/v1/zz_generated.conversion.go",
+    "vendor/golang.org/x/sys/cpu/cpu_loong64.s",
+    "staging/src/k8s.io/kubectl/pkg/config/v1/doc.go",
+    "staging/src/k8s.io/api/testdata/v1.34.0/resource.k8s.io.v1beta1.ResourceClaimTemplate.pb",
+    "cmd/kubectl-convert/kubectl-convert.go",
+    "pkg/controller/replication/config/v1alpha1/zz_generated.conversion.go",
+    "staging/src/k8s.io/code-generator/cmd/validation-gen/output_tests/elide_no_validations/testdata/validate-false.json",
+    "staging/src/k8s.io/client-go/tools/clientcmd/doc.go",
+    "pkg/apis/resource/v1alpha3/conversion.go",
+    "staging/src/k8s.io/api/testdata/v1.36.0/certificates.k8s.io.v1alpha1.ClusterTrustBundle.json",
+    "pkg/controller/volume/attachdetach/config/v1alpha1/defaults.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/baseline/v1.24/pass/base.yaml",
+    "staging/src/k8s.io/cloud-provider/controllers/node/config/v1alpha1/doc.go",
+    "pkg/apis/batch/v1beta1/zz_generated.validations.go",
+    "vendor/github.com/gogo/protobuf/plugin/compare/comparetest.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/baseline/v1.35/fail/hostprobesandhostlifecycle0.yaml",
+    "pkg/proxy/healthcheck/healthcheck_test.go",
+    "vendor/k8s.io/utils/cpuset/OWNERS",
+    "staging/src/k8s.io/api/testdata/v1.35.0/certificates.k8s.io.v1.CertificateSigningRequest.yaml",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.29/fail/restrictedvolumes6.yaml",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.28/fail/privileged1.yaml",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.10/fail/privileged1.yaml",
+    "vendor/k8s.io/utils/inotify/LICENSE",
+    "pkg/apis/core/v1/helper/qos/qos_test.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/baseline/v1.9/fail/apparmorprofile0.yaml",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.11/fail/restrictedvolumes18.yaml",
+    "staging/src/k8s.io/client-go/kubernetes/typed/networking/v1/ingress.go",
+    "pkg/OWNERS"
+  ],
+  "process_floor_ms": 1.6245420000018385,
+  "git_floor_ms": 7.762874999997393,
+  "inproc_open_ms": 0.166458,
+  "latency_ms": {
+    "git_log": {
+      "median": 47.672271000006816,
+      "p90": 76.38579099999987,
+      "max": 116.56199999999828
+    },
+    "git_follow": {
+      "median": 651.3728334999911,
+      "p90": 922.8122089999999,
+      "max": 1463.1283749999966
+    },
+    "cli_log": {
+      "median": 4.740417000004271,
+      "p90": 7.053375000005246,
+      "max": 9.380000000000166
+    },
+    "cli_follow": {
+      "median": 4.66043750000722,
+      "p90": 7.229999999999848,
+      "max": 9.491167000000189
+    },
+    "inproc_log": {
+      "median": 0.000166,
+      "p90": 0.009291,
+      "max": 0.017332999999999998
+    },
+    "inproc_follow": {
+      "median": 0.00029099999999999997,
+      "p90": 0.025,
+      "max": 0.040042
+    },
+    "inproc_cochange": {
+      "median": 0.5120835,
+      "p90": 12.646666999999999,
+      "max": 17.378292000000002
+    }
+  },
+  "exact": {
+    "paths": 50,
+    "mismatches": []
+  },
+  "shallow_clone_s": 4.604960417000001,
+  "shallow_git_bytes": 53432320,
+  "full_git_bytes": 1436381184,
+  "pull_s": 0.02793316699998627,
+  "shallow": {
+    "paths": 50,
+    "identical_follow": 50,
+    "git_follow_commits_max": 1,
+    "git_follow_commits_mean": 1
+  }
+}

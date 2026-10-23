@@ -1,0 +1,119 @@
+{
+  "repo": "prometheus",
+  "label": "baseline",
+  "head": "42b4b62f0e31e914f015edd96b80f36a522148f2",
+  "commits_all": 21485,
+  "git_commit_graph_s": 0.10103229200000001,
+  "build_s": 2.551956,
+  "index_commits": 21485,
+  "index_strings": 12930,
+  "index_bytes": 11957285,
+  "segment_bytes": 10535024,
+  "reach_bytes": 1421832,
+  "paths": [
+    "go.mod",
+    "go.sum",
+    "CHANGELOG.md",
+    "promql/engine.go",
+    "cmd/prometheus/main.go",
+    "VERSION",
+    "docs/configuration/configuration.md",
+    "web/web.go",
+    "config/config.go",
+    "tsdb/head_test.go",
+    "documentation/examples/remote_storage/remote_storage_adapter/opentsdb/client_test.go",
+    "config/testdata/rules_abs_path.good.yml",
+    "plugins/plugin_stackit.go",
+    "web/api/v1/codec.go",
+    "cmd/promtool/testdata/failing.yml",
+    "config/testdata/agent_mode.with_rule_files.yml",
+    "web/ui/react-app/src/pages/targets/__testdata__/testdata.ts",
+    "tsdb/chunkenc/histogram_meta_test.go",
+    "config/testdata/ionos_datacenter.bad.yml",
+    "model/textparse/openmetrics2lex.l.go",
+    "tsdb/isolation.go",
+    "cmd/promtool/testdata/rules_extrafields.yml",
+    "storage/remote/otlptranslator/prometheusremotewrite/histograms_test.go",
+    "discovery/kubernetes/client.go",
+    "cmd/promtool/testdata/authorization_credentials_file.good.yml",
+    "config/testdata/external_labels.good.yml",
+    "promql/promqltest/testdata/info.test",
+    "promql/parser/ast.go",
+    "config/reload_test.go",
+    "discovery/moby/tasks_test.go",
+    "config/testdata/global_scrape_protocols_and_local_disable_scrape_native_hist.good.yml",
+    "tsdb/docs/format/chunks.md",
+    "promql/parser/prettier_test.go",
+    "cmd/promtool/testdata/rules_run_extrafields.yml",
+    "web/ui/react-app/src/themes/dark.scss",
+    "tsdb/fileutil/mmap.go",
+    "config/testdata/oci_authentication_method.bad.yml",
+    "discovery/linode/metrics.go",
+    "util/runtime/statfs_windows_test.go",
+    "util/runtime/limits_windows.go",
+    "cmd/promtool/testdata/url_in_alert_targetgroup_with_relabel_config.bad.yml",
+    "tsdb/head_other.go",
+    "tsdb/ooo_head_read_test.go",
+    "plugins/plugin_xds.go",
+    "cmd/promtool/testdata/good-sd-file.yaml",
+    "discovery/kubernetes/pod_test.go",
+    "cmd/promtool/testdata/dump-test-3.prom",
+    "tsdb/fileutil/dir.go",
+    "config/testdata/otlp_sanitize_ignore_resource_attributes.good.yml",
+    "docs/configuration/https.md"
+  ],
+  "process_floor_ms": 1.3497919999991836,
+  "git_floor_ms": 6.927292000000307,
+  "inproc_open_ms": 0.15645900000000001,
+  "latency_ms": {
+    "git_log": {
+      "median": 11.18120850000004,
+      "p90": 18.762166000000136,
+      "max": 20.614457999999836
+    },
+    "git_follow": {
+      "median": 61.54824999999997,
+      "p90": 87.61483400000003,
+      "max": 170.97991700000037
+    },
+    "cli_log": {
+      "median": 4.434250499999237,
+      "p90": 5.19645799999946,
+      "max": 6.533333000000141
+    },
+    "cli_follow": {
+      "median": 4.383125000000376,
+      "p90": 5.334666999999627,
+      "max": 6.270583000000052
+    },
+    "inproc_log": {
+      "median": 0.000166,
+      "p90": 0.0037080000000000004,
+      "max": 0.009625
+    },
+    "inproc_follow": {
+      "median": 0.000312,
+      "p90": 0.008291999999999999,
+      "max": 0.014459
+    },
+    "inproc_cochange": {
+      "median": 0.8681045000000001,
+      "p90": 2.323125,
+      "max": 2.4833339999999997
+    }
+  },
+  "exact": {
+    "paths": 50,
+    "mismatches": []
+  },
+  "shallow_clone_s": 0.42254799999999904,
+  "shallow_git_bytes": 7024640,
+  "full_git_bytes": 321503232,
+  "pull_s": 0.00805404200000126,
+  "shallow": {
+    "paths": 50,
+    "identical_follow": 50,
+    "git_follow_commits_max": 1,
+    "git_follow_commits_mean": 1
+  }
+}

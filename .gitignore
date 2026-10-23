@@ -1,0 +1,17 @@
+# Build artifacts
+/bin/
+*.exe
+
+# Python caches from bench scripts
+__pycache__/
+
+# IDE
+.idea/
+.vscode/
+
+# Internal design documents
+/proposal.md
+
+# Research notes and reports
+/research_notes/
+/reports/

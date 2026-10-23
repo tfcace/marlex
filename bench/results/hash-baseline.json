@@ -1,0 +1,99 @@
+{
+  "repo": "hash",
+  "label": "baseline",
+  "head": "8482409d63279b7e7a5c486e67d5832cfbe4ac80",
+  "commits_all": 195,
+  "git_commit_graph_s": 0.055548333000000005,
+  "build_s": 0.201921584,
+  "index_commits": 195,
+  "index_strings": 366,
+  "index_bytes": 95815,
+  "segment_bytes": 92016,
+  "reach_bytes": 3384,
+  "paths": [
+    "internal/shell/shell.go",
+    "go.mod",
+    "go.sum",
+    "internal/executor/executor.go",
+    ".github/workflows/release.yml",
+    "internal/editor/editor.go",
+    ".release-please-manifest.json",
+    "README.md",
+    "internal/agent/acp.go",
+    "internal/editor/display.go",
+    "internal/config/load_error.go",
+    "internal/agent/reconnect_test.go",
+    "internal/editor/mode.go",
+    "demos/hero.gif",
+    "dx.md",
+    "internal/prompt/colors_test.go",
+    "e2e/live_agent_test.go",
+    "internal/editor/editor_additional_test.go",
+    "internal/shell/agent_stream_error_test.go",
+    "docs/completion-plugins.md",
+    "internal/parser/fuzz_test.go",
+    "internal/compat/prompt_test.go",
+    "cmd/hash/migrate.go",
+    "e2e/devops_recipes_test.go",
+    "internal/executor/pattern_test.go",
+    "internal/executor/cmd_status.go",
+    "docs/superpowers/plans/2026-06-05-turn-by-turn-agent-conversation.md",
+    "internal/completion/executable.go",
+    "e2e/learning_e2e_test.go",
+    "internal/readline/readline_test.go"
+  ],
+  "process_floor_ms": 1.2701670000003773,
+  "git_floor_ms": 6.651500000000254,
+  "inproc_open_ms": 0.15820900000000002,
+  "latency_ms": {
+    "git_log": {
+      "median": 8.207437499999859,
+      "p90": 9.80308299999999,
+      "max": 11.728875000000027
+    },
+    "git_follow": {
+      "median": 15.20410399999994,
+      "p90": 18.052750000000728,
+      "max": 21.085833000000775
+    },
+    "cli_log": {
+      "median": 4.318645499999718,
+      "p90": 4.569249999999858,
+      "max": 4.823875000000033
+    },
+    "cli_follow": {
+      "median": 4.213292000000202,
+      "p90": 4.3544579999998945,
+      "max": 4.397167000000035
+    },
+    "inproc_log": {
+      "median": 8.3e-05,
+      "p90": 0.00016700000000000002,
+      "max": 0.00029099999999999997
+    },
+    "inproc_follow": {
+      "median": 8.35e-05,
+      "p90": 0.00029099999999999997,
+      "max": 0.0005
+    },
+    "inproc_cochange": {
+      "median": 0.014083499999999999,
+      "p90": 0.033292,
+      "max": 0.042875
+    }
+  },
+  "exact": {
+    "paths": 30,
+    "mismatches": []
+  },
+  "shallow_clone_s": 0.12355587500000009,
+  "shallow_git_bytes": 925696,
+  "full_git_bytes": 31772672,
+  "pull_s": 0.0056394170000002575,
+  "shallow": {
+    "paths": 30,
+    "identical_follow": 30,
+    "git_follow_commits_max": 1,
+    "git_follow_commits_mean": 1
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "repo": "kubernetes",
+  "label": "v0.1.0",
+  "head": "098ec58c5a98cc5da18f119d0123361afca888b4",
+  "commits_all": 163022,
+  "git_commit_graph_s": 0.891201792,
+  "build_s": 23.8398775,
+  "core_build_s": 2.6253315830000012,
+  "index_commits": 163022,
+  "index_strings": 108793,
+  "index_bytes": 258617193,
+  "segment_bytes": 45553400,
+  "reach_bytes": 2877432,
+  "blobs_bytes": 31923356,
+  "hunks_bytes": 178262328,
+  "hunks": true,
+  "core_bytes": 48431509,
+  "paths": [
+    "pkg/kubelet/kubelet.go",
+    "pkg/features/kube_features.go",
+    "vendor/modules.txt",
+    "api/openapi-spec/swagger.json",
+    "go.mod",
+    "go.sum",
+    "pkg/kubelet/kubelet_test.go",
+    "pkg/generated/openapi/zz_generated.openapi.go",
+    "cmd/kubelet/app/server.go",
+    "cluster/gce/util.sh",
+    "staging/src/k8s.io/apiserver/pkg/registry/rest/table.go",
+    "vendor/k8s.io/utils/inotify/inotify_others.go",
+    "pkg/util/async/runner.go",
+    "staging/src/k8s.io/client-go/kubernetes/typed/extensions/v1beta1/fake/fake_ingress.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.36/fail/apparmorprofile1.yaml",
+    "hack/verify-licenses.sh",
+    "pkg/apis/storage/v1alpha1/zz_generated.conversion.go",
+    "vendor/github.com/go-jose/go-jose/v4/jwe.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/baseline/v1.13/fail/hostports2.yaml",
+    "pkg/controlplane/controller/defaultservicecidr/default_servicecidr_controller_test.go",
+    "staging/src/k8s.io/client-go/applyconfigurations/networking/v1beta1/ingressrule.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.10/fail/hostnamespaces2.yaml",
+    "pkg/apis/autoscaling/v1/zz_generated.conversion.go",
+    "vendor/golang.org/x/sys/cpu/cpu_loong64.s",
+    "staging/src/k8s.io/kubectl/pkg/config/v1/doc.go",
+    "staging/src/k8s.io/api/testdata/v1.34.0/resource.k8s.io.v1beta1.ResourceClaimTemplate.pb",
+    "cmd/kubectl-convert/kubectl-convert.go",
+    "pkg/controller/replication/config/v1alpha1/zz_generated.conversion.go",
+    "staging/src/k8s.io/code-generator/cmd/validation-gen/output_tests/elide_no_validations/testdata/validate-false.json",
+    "staging/src/k8s.io/client-go/tools/clientcmd/doc.go",
+    "pkg/apis/resource/v1alpha3/conversion.go",
+    "staging/src/k8s.io/api/testdata/v1.36.0/certificates.k8s.io.v1alpha1.ClusterTrustBundle.json",
+    "pkg/controller/volume/attachdetach/config/v1alpha1/defaults.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/baseline/v1.24/pass/base.yaml",
+    "staging/src/k8s.io/cloud-provider/controllers/node/config/v1alpha1/doc.go",
+    "pkg/apis/batch/v1beta1/zz_generated.validations.go",
+    "vendor/github.com/gogo/protobuf/plugin/compare/comparetest.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/baseline/v1.35/fail/hostprobesandhostlifecycle0.yaml",
+    "pkg/proxy/healthcheck/healthcheck_test.go",
+    "vendor/k8s.io/utils/cpuset/OWNERS",
+    "staging/src/k8s.io/api/testdata/v1.35.0/certificates.k8s.io.v1.CertificateSigningRequest.yaml",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.29/fail/restrictedvolumes6.yaml",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.28/fail/privileged1.yaml",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.10/fail/privileged1.yaml",
+    "vendor/k8s.io/utils/inotify/LICENSE",
+    "pkg/apis/core/v1/helper/qos/qos_test.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/baseline/v1.9/fail/apparmorprofile0.yaml",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.11/fail/restrictedvolumes18.yaml",
+    "staging/src/k8s.io/client-go/kubernetes/typed/networking/v1/ingress.go",
+    "pkg/OWNERS"
+  ],
+  "process_floor_ms": 1.4226669999857222,
+  "git_floor_ms": 7.169040999997378,
+  "inproc_open_ms": 0.236292,
+  "blame_paths": [
+    "pkg/kubelet/kubelet.go",
+    "pkg/features/kube_features.go",
+    "vendor/modules.txt",
+    "api/openapi-spec/swagger.json",
+    "go.mod",
+    "go.sum",
+    "pkg/kubelet/kubelet_test.go",
+    "pkg/generated/openapi/zz_generated.openapi.go",
+    "cmd/kubelet/app/server.go",
+    "cluster/gce/util.sh",
+    "staging/src/k8s.io/apiserver/pkg/registry/rest/table.go",
+    "vendor/k8s.io/utils/inotify/inotify_others.go",
+    "pkg/util/async/runner.go",
+    "staging/src/k8s.io/client-go/kubernetes/typed/extensions/v1beta1/fake/fake_ingress.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.36/fail/apparmorprofile1.yaml",
+    "hack/verify-licenses.sh",
+    "pkg/apis/storage/v1alpha1/zz_generated.conversion.go",
+    "vendor/github.com/go-jose/go-jose/v4/jwe.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/baseline/v1.13/fail/hostports2.yaml",
+    "pkg/controlplane/controller/defaultservicecidr/default_servicecidr_controller_test.go",
+    "staging/src/k8s.io/client-go/applyconfigurations/networking/v1beta1/ingressrule.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.10/fail/hostnamespaces2.yaml",
+    "pkg/apis/autoscaling/v1/zz_generated.conversion.go",
+    "vendor/golang.org/x/sys/cpu/cpu_loong64.s",
+    "staging/src/k8s.io/kubectl/pkg/config/v1/doc.go",
+    "cmd/kubectl-convert/kubectl-convert.go",
+    "pkg/controller/replication/config/v1alpha1/zz_generated.conversion.go",
+    "staging/src/k8s.io/code-generator/cmd/validation-gen/output_tests/elide_no_validations/testdata/validate-false.json",
+    "staging/src/k8s.io/client-go/tools/clientcmd/doc.go",
+    "pkg/apis/resource/v1alpha3/conversion.go",
+    "staging/src/k8s.io/api/testdata/v1.36.0/certificates.k8s.io.v1alpha1.ClusterTrustBundle.json",
+    "pkg/controller/volume/attachdetach/config/v1alpha1/defaults.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/baseline/v1.24/pass/base.yaml",
+    "staging/src/k8s.io/cloud-provider/controllers/node/config/v1alpha1/doc.go",
+    "pkg/apis/batch/v1beta1/zz_generated.validations.go",
+    "vendor/github.com/gogo/protobuf/plugin/compare/comparetest.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/baseline/v1.35/fail/hostprobesandhostlifecycle0.yaml",
+    "pkg/proxy/healthcheck/healthcheck_test.go",
+    "vendor/k8s.io/utils/cpuset/OWNERS",
+    "staging/src/k8s.io/api/testdata/v1.35.0/certificates.k8s.io.v1.CertificateSigningRequest.yaml",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.29/fail/restrictedvolumes6.yaml",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.28/fail/privileged1.yaml",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.10/fail/privileged1.yaml",
+    "vendor/k8s.io/utils/inotify/LICENSE",
+    "pkg/apis/core/v1/helper/qos/qos_test.go",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/baseline/v1.9/fail/apparmorprofile0.yaml",
+    "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.11/fail/restrictedvolumes18.yaml",
+    "staging/src/k8s.io/client-go/kubernetes/typed/networking/v1/ingress.go",
+    "pkg/OWNERS"
+  ],
+  "blame_exact": {
+    "paths": 49,
+    "mismatches": [
+      {
+        "path": "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.29/fail/restrictedvolumes6.yaml",
+        "lines": 31,
+        "differ": 24
+      },
+      {
+        "path": "staging/src/k8s.io/pod-security-admission/test/testdata/restricted/v1.28/fail/privileged1.yaml",
+        "lines": 25,
+        "differ": 23
+      }
+    ],
+    "lines": 210250
+  },
+  "latency_ms": {
+    "git_log": {
+      "median": 43.86125000000618,
+      "p90": 72.31120799999502,
+      "max": 117.9223339999993
+    },
+    "git_follow": {
+      "median": 627.711291500006,
+      "p90": 883.4734169999905,
+      "max": 1382.6580419999743
+    },
+    "cli_log": {
+      "median": 4.727917000010962,
+      "p90": 7.1377920000017525,
+      "max": 8.87808300000259
+    },
+    "cli_follow": {
+      "median": 4.602375499999312,
+      "p90": 7.245750000002715,
+      "max": 9.144165999998677
+    },
+    "inproc_log": {
+      "median": 0.00016700000000000002,
+      "p90": 0.009958,
+      "max": 0.018209
+    },
+    "inproc_follow": {
+      "median": 0.00029099999999999997,
+      "p90": 0.026375,
+      "max": 0.04
+    },
+    "inproc_cochange": {
+      "median": 0.5086255,
+      "p90": 11.025875,
+      "max": 14.716709000000002
+    },
+    "inproc_blame": {
+      "median": 0.777875,
+      "p90": 1.6665,
+      "max": 36.831875
+    },
+    "git_blame": {
+      "median": 41.341999999986,
+      "p90": 153.19199999999,
+      "max": 3331.1598749999976
+    },
+    "cli_blame": {
+      "median": 6.27074999999877,
+      "p90": 11.764583000001494,
+      "max": 141.39908300001025
+    }
+  },
+  "exact": {
+    "paths": 50,
+    "mismatches": []
+  },
+  "shallow_clone_s": 4.5009205000000065,
+  "shallow_git_bytes": 53956608,
+  "full_git_bytes": 1508761600,
+  "pull_s": 0.1514310420000129,
+  "pulled_bytes": 226693837,
+  "transferred_bytes": 38319520,
+  "core_transferred_bytes": 14653378,
+  "hunks_transferred_bytes": 23666142,
+  "shallow_blame_identical": 49,
+  "shallow": {
+    "paths": 50,
+    "identical_follow": 50,
+    "git_follow_commits_max": 1,
+    "git_follow_commits_mean": 1
+  }
+}
